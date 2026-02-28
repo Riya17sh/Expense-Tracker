@@ -1,0 +1,102 @@
+.date-filter {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.date-filter h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.quick-filters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quick-filters button {
+  background: #f0f0f0;
+  border: 2px solid transparent;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.quick-filters button:hover {
+  background: #e8e8e8;
+}
+
+.quick-filters button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.custom-range {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.custom-range input {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease;
+}
+
+.custom-range input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.custom-range span {
+  color: #999;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.custom-range button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-range button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 768px) {
+  .quick-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-range {
+    flex-direction: column;
+  }
+
+  .custom-range input {
+    width: 100%;
+  }
+
+  .custom-range button {
+    width: 100%;
+  }
+}
